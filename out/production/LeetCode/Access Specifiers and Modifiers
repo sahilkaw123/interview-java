@@ -1,0 +1,19 @@
+Packages  --> has set of related class files.
+
+Modifiers:
+1.abstract
+2.static
+3.Final
+4.native
+5.transient
+6.synchronized
+
+Access Specifiers
+1. Public  --> Member can be accessed anywhere.
+2. Private --> Member can be accessed within the class
+3. Protected --> Protected member can be accessed in the same class and in sub class within the same
+package or different package or non sub class with in the same package.
+
+
+
+

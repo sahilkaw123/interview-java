@@ -1,0 +1,25 @@
+garbage collection :
+a. Criteria for the java garbage collection
+1. Nullifying the reference variable
+2. Reassigning the reference variable
+3. Object created inside a method
+4. Island of Isolation
+
+b. The method for requesting JVM to run the Garbage collector
+1. System.gcc
+2. Runtime class gcc
+
+c. Finalization
+
+Garbage collector is a program which runs inside the JVM. When we run the JVM the GC runs too and when
+an object comes out of the program before the GC is run.
+
+Methodology --> Mark and sweep methodology and check which are referenced are marked and which are not referenced
+are unmarked and collects all the unmarked
+
+*Fragmentation takes place due to the GC.
+Defragmentation takes place after that which is done by the shift and copy method
+Copying takes place by copying the content of the memory from  the top memory to the bottom memory and vice versa
+So there are two memories in which copying takes place without copying the dereferenced memory.
+
+Garbage Collector can acts on the heap area and also on the Method area.

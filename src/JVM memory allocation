@@ -1,0 +1,16 @@
+http://stackoverflow.com/questions/1262328/how-is-the-java-memory-pool-divided
+
+Area shared and not shared by the threads
+
+Not Shared:
+PC Area
+JVM Stack
+Native Method Stack
+
+Shared:
+Heap
+Method Area
+Run Time Constant Pool
+
+
+http://www.programcreek.com/2013/04/jvm-run-time-data-areas/

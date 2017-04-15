@@ -1,0 +1,72 @@
+Multi Threaded Program Issues:
+
+Since all the threads shared the same memory resources and all these data is shared by these threads and
+they act on the common data so the final information can be wrong.
+
+Synchronization : is the process of placing the lock on the "object" so that only one thread can act on the
+object at a time. Once done it can release the lock. Synchronized can be used against a method or against a blaock inside the
+method.
+
+Synchronized method places the lock on the current object and is used as the keyword with the method name
+Sysnchronized block places the lock on the any object which is not necessary to be the current object.
+
+Deamon Threads and User Threads
+ Deamon Threads - are responsible for the managing the resources. When I start my JVM the Garbage collector has to run
+ and thus Daemon threads are used to run the process. GC has the lowest priority which is 1. Daemon threads are in While
+ true loop.
+
+ Why not to put the while (true) loop in user threads -- because JVM reamins alive till the execution of the user threads
+ threby it would never come out of the loop. In the Deamon threads are alive and once where the user threads are killed
+ the JVM would take care of killing the deamon threads.
+
+ Multithreaded Program : Animation Programs and Client Server Program and even in the event management program
+
+Thread has some property --> It has a name and it has a priority and belongs to some group.
+If we do not specify the threadgroup object then the child thread belongs to the same group. Do not set the prioroty then
+child threads get the parent thread priority.
+
+Join() e.g
+
+T1{
+...
+T2.joins // Here the thread T2 starts the execution and the T1 waits till it completes. Joins waits till the T2 has not died.
+//But in reality we need to wait till T2 executes all the code which is similar to T1 thread and after that T1 thread can run
+}
+
+T2{
+.....
+}
+
+Joins and the Sleep methods thrown interrupted exception and hence they have to be placed in try catch block
+Interrupt methods interrupts the Join and Sleep method
+
+
+InterThreaded Communication : If one thread has to send the data to the other thread that is done through pipes
+
+https://www.youtube.com/watch?v=378DHU9IsS4&index=20&list=PL3618681FEEDA821F
+
+
+Wait() and Notify() and NotifyAll()
+
+wait() --> Applied on the Synchronized block or method to put the thread into wait state and release the
+lock on the object and once the notify() method is called it would bring back the waiting thread back to the running state.
+NotifyAll() method notifies all the threads and the highest priority job gets the lock.
+*These methods must always be called from the synchronized method or block and if it is in the non-synchronized block then
+this non-synchronized block must be called from the synchronized area.
+
+In sleep and suspend and resume methods there is an issue that they do not release the lock from the object. This is how
+it is different from the wait and notify methods.
+
+
+MultiTasking : A single user issuing multiple tasks to the system.  eg Unix user who can issue multiple tasks to the System.
+Multithreading : Single process having the multiple parts of the execution. eg a Word document while typing auto save and spell check taking
+place at same time. There is no Process Id and closing the main processes will close the subsequent processes.
+
+
+Mutex - Mutual Exclusion is regarding the accessing the memory. So if Thread A is accesing the part of the memory then at that point
+of them it would not allow Thread B to access the same part of the memory. Now in Synchronization its the part of the process which
+takes place prior to the other which means that part A is completed before the Part B starts. Wait() notify and Join are used for synchronization.
+https://www.youtube.com/watch?v=DvF3AsTglUU
+
+Semaphore: It restricts the number of simultaneous users a shared resource can act upon to a maximum number. Threads can request the
+semaphore thereby decrementing the number of the semaphore and then increase the number on release.

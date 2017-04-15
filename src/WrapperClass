@@ -1,0 +1,33 @@
+Wrapper class: Used to convert the primitive type to the object and vice versa.
+Autoboxing and Boxing
+Autoboxing is used to convert the primitive type to the Object wrapper class Type
+In OOPS primitive datatype were adopted from the previous languages but to make a pure Objects oriented
+concepts wrapper classes were introduced. Primitive data types are saved on stacks while wrapper classes
+value are stored on the heap and are referenced from the stack.
+Wrapper class usage --> Generics can only accept the wrapper class i.e reference types. Use Type wrappper
+class
+
+Instance variable are stored on heap and they are created only when object of the class is created. They are referenced
+from the stack eg. Class XYZ{
+int a, b;
+}
+// Making object of the class XYZ
+
+XYZ ref = new XYZ() ==> First is the class name , ref is the refernece variable and is stored on the stack, and the
+variables a and b are created on the heap. The last XYZ() is the constructor which is being invocked.
+
+If there is any local variable then that variable is stored in the stack of the memory along with the function name.
+Thats why we need to initialize the local variable.
+
+
+int i; //primitive type
+Integer a = Integer.valueOf(i); //
+Integer a = i; // this is autoboxing same as valueOf function done above
+
+Unboxing
+Integer i = new integer(10); //wrapper class
+int ab = i.intValue(); //converting to the primitive type
+int j = i //unboxing.
+
+int x = Integer.parseInt(String)
+String is of type class, its not a primitive dataType

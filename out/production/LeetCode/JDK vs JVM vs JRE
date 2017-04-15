@@ -1,0 +1,31 @@
+JDK - JAVA development kit  - provides environment to both develop and run the java applications
+JRE - Java Runtime environment - Only to the run the java application the environment is JRE
+JVM - JAVA Virtual Machine - Jvm is an interpreter which is responsible for running the java program line by line
+
+JVM - understands the byte code which is the compiled form of the source code.
+
+
+
+Collection vs Collections --> Collection is an interface and collecions is a class
+
+What happens when JVM starts up
+
+It gets a piece of memory from the OS and depending upon the verison of the JVM the memory is allocated
+All objects on the heap are GC
+
+Stack :
+All the local varibles and the Method invocations live on the stack. Local variable are declared inside
+the method and their life time is till the method is on the stack. The method on the top of the stack is the
+method which is currently executing.
+
+Heap :
+All objects live in the heap. Instance variables are declared inside the class and above the methods and
+they represent the field each individual object has
+
+java.lang package has some of the important classes
+Object class
+Class Class
+String class
+Wrapper class
+
+

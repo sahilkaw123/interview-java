@@ -1,0 +1,80 @@
+Threads and Locks in java
+
+Threads: Life cycle of Thread -->
+1) New : When a new thread is created.
+2) Runnable: A Thread in this stage is when it is executing the task
+3) Waiting: If another thread is working on the critical region then the other thread is in waiting state
+4) Timed Waiting: A thread in this state transitions back to the runnable state when that time interval
+expires or when the event it is waiting for occurs.
+5) Dead: A runnable thread enters the terminated state when it completes its task or otherwise terminates.
+
+Two ways of implemeting the threads
+1) Implementing the runnable interface
+2) Extending the Thread class
+
+1. Implementing the runnable interface:
+
+How to go for it? -- >
+1. Implement runnable on the class
+2. This runnable interface has only one method which is the run() method so implement the run method.
+3. Crete an instance of the class //As we are implementing the runnable interface so the instance
+created over here is runnable object.
+4.  Create a thread object by passing the runnable object as parameter. To create a mapping between the
+runnable object and its instnace
+5. Call start() method on the thread.
+
+If we do not pass the parameter to the instance created on the thread then the thread will automatically
+call the thread class run method which does nothing and thereby it does nothing. So its important to pass
+the runnable object to the instance created of the thread class.
+
+1. Implement the run() method of the runnable interface.
+
+public void run(){
+//put all the business logic inside this run method.
+}
+
+2. Instantiate the thread object i.e declare a instance variable of type thread and make a constructor
+Thread(Runnable threadObj, String threadName);
+
+where threadObj is the instance of the Runnable interface
+threadName is the name of the thread
+
+3. Once the thread is created you will call the start method which will call the run method to execute the
+thread.
+
+void start();
+
+example - TestThread.java
+
+2nd way of creating threads:
+
+Extending the thread Class of the Java:
+1. Extending the class from the thread class.
+2. Override the run method
+3. Create an instance of the above class. // As we are extending the Thread class so the
+instance created is the thread object
+4. Start the thread.
+
+//This Parent Thread class which has been extended is implementing the Runnable interface and it uses the
+ run method as the do nothing method. Then we override the run method of the Parent class in our class and
+ on the thread object we invoke the start() method. The start method calls the run method thereby invoking it
+
+
+
+
+When to Extend from the class and when to implement the runnable interface of the thread class of Java
+1. Java does not support multiple intheritance , so once you have extended the class of Thread you can
+not extend it from other classes. When we extend the thread class then the class becomes a single threaded
+which is inheriting the property of the main class and it gets heavy
+
+2. When we implement the runnable interface then we are only overriding the run() method, but we create one
+or more instances of the thread class and in that instance we pass the instance of your runnable interface
+implemented class and then we apply the start() method on the Thread instance. So the instance creates a seperate
+thread and each thread runs individually not as a single heavy thread.
+
+Q) Why do we need the START method?
+If we call the run method from the main() method then it would not be running as the differnt method
+ but it would be part of the main() thread. So as to execute the thread as differently we call the
+ start() method from the main and start() method makes a different stack and call the run() method
+ as the different thread.
+

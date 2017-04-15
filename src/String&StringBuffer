@@ -1,0 +1,32 @@
+String and StringBuffer
+
+String is a class in Java
+These can be created in the two ways -- By creating the object of the String Class and by initializing the
+value to the string
+
+1. WAY--> String s= "Hello"; // This would be done in the free pool of the memory which is non heap memory and in the
+method area.
+String s2 ="Hello";
+This s and s2 would point to the same object in the Method area. So if (s==s2) would be true because
+the comaprison is made of the address.
+
+2. WAY-->  String s = new String("Hello"); // This would be allocated in the heap area
+ String s2 = new String("Hello");
+ if(s==s2) == would return false because these would point to the different addresses.
+
+
+
+ String are non mutable class -->
+
+ Inside the JVM the string class is created using the StringBuffer class and thereby if
+
+ String s = "Hello";  // Inside JVM ==> s = new StringBuffer("Hello")
+ s+="World"   // s = new StringBuffer("Hello").append("World").toString();
+
+toString() --> method return the address of the string but it is overridden in the class to return the
+object type String.
+
+So for this we do not use the String object directly inside the java, we make use of the StringBuilder
+or StringBuffer to manipulate the String and then convert it back to the String using the toString()
+
+

@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=ZLGqbaNPs24&list=PL3618681FEEDA821F&index=8
+Package Name --> all in lower case   "testpackage".
+Class Name --> First name Capital and Second Letter as Capital - "TestClass".
+Method Name --> First name should be small and second name should be in Capital - "testMethod"
+Variable Name --> First Name should be small and second name should be in Capital - "testVariable"
+Static varaibles or Final Variables  - Should be in Capital - "CLASSCONST"
+
+Object class is the parent class of every class.
+
+Object class has methods like -
+equals method - To see if the object are equal
+clone method - creates bit by bit colne of the object
+hashcode method - returns the hascode of the object
+Multithreaded
+Wait
+notify
+notifyAll
+getClass - used to find the reflection of the class. returns the class object
+
+Reflection: Takes get Methods
+Create an instance of the class and use the method of the getClass() method to see the class defination
+
+Whenever the classes are loaded in the JVM. The JVM creates the object of the "class" and stores it in
+the form of the key value pair.
+
+
+System class
+PrintStream out --> Printing out
+InputStream in --> Inputting devices
+arrayCopy
+exit(int)
+loadLibrary(String)
+get/setSecurity
+gc() - explicitly invoke the garbage class
+String getProperty() - JVM version and etc

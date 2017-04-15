@@ -1,0 +1,11 @@
+Constructor overloading
+Overloading is Static binding of the Polymorphism
+Class A{
+A(){
+
+}
+//Constructor Overloading
+A(int X) {
+
+}
+}
